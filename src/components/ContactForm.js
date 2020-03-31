@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -31,28 +32,45 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" value={message} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+          <Form onSubmit={this.handleSubmit}>
+          <FormGroup>
+            <Label for="exampleName">Name</Label>
+            <Input type="text" name="name" id="examplePassword" placeholder="Enter your name" value={name} onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleEmail">Email</Label>
+            <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" value={email} onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleMessage">Message</Label>
+            <Input type="textarea" name="message" id="exampleMessage" placeholder="Enter your text" value={message} onChange={this.handleChange} />
+          </FormGroup>
+          <Button>Submit</Button>
+        </Form>
     );
   }
 }
 
 export default ContactForm
+
+
+{/* <Form onSubmit={this.handleSubmit}>
+<p>
+  <Label>
+    Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
+  </Label>
+</p>
+<p>
+  <Label>
+    Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
+  </Label>
+</p>
+<p>
+  <Label>
+    Message: <textarea name="message" value={message} onChange={this.handleChange} />
+  </Label>
+</p>
+<p>
+  <button type="submit">Send</button>
+</p>
+</Form> */}
