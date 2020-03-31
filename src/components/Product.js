@@ -47,6 +47,7 @@ class Product extends Component {
                             <strong className="price-strike">$10</strong>
                         </h5>
                     </div>
+
                 </div>
             </ProductWrapper>
         )
