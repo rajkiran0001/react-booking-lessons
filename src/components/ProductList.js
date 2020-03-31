@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Product from "./Product"
 import Title from "./Title"
 import { ProductConsumer } from "../context"
-import NetlifyForm from 'react-netlify-form'
+import ContactForm from './ContactForm';
 
 class ProductList extends Component {
 
@@ -21,29 +21,7 @@ class ProductList extends Component {
                                 }}
                             </ProductConsumer>
                         </div>
-                        <NetlifyForm name='Contact Form'>
-                            {({ loading, error, success }) => (
-                                <div>
-                                    {loading &&
-                                        <div>Loading...</div>
-                                    }
-                                    {error &&
-                                        <div>Your information was not sent. Please try again later.</div>
-                                    }
-                                    {success &&
-                                        <div>Thank you for contacting us!</div>
-                                    }
-                                    {!loading && !success &&
-                                        <div>
-                                            <strong>name: </strong><input type='text' name='Name' required />
-                                            <strong>Email: </strong><input type='text' name='Name' required />
-                                            <strong>comments: </strong> <textarea name='Message' required />
-                                            <button>Submit</button>
-                                        </div>
-                                    }
-                                </div>
-                            )}
-                        </NetlifyForm>
+                        <ContactForm></ContactForm>
                     </div>
                 </div>
             </React.Fragment>
