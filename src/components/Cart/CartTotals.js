@@ -4,7 +4,7 @@ import PayPalButton from './PayPalButton'
 
 
 function CartTotals({ value, history }) {
-    const { cartSubTotal, cartTax, cartTotal, clearCart } = value;
+    const { cartTotal, clearCart } = value;
     console.log(value);
 
     return (
@@ -16,16 +16,8 @@ function CartTotals({ value, history }) {
                             <button className="btn btn-outline-danger text-uppercase mb-3 px-5" onClick={() => clearCart()}>clear cart</button>
                         </Link>
                         <h5>
-                            <span className="text-title">subtotal :</span>
-                            <stron>$ {cartSubTotal}</stron>
-                        </h5>
-                        <h5>
-                            <span className="text-title">tax :</span>
-                            <stron>$ {cartTax}</stron>
-                        </h5>
-                        <h5>
                             <span className="text-title">total :</span>
-                            <stron>$ {cartTotal}</stron>
+                            <strong>$ {cartTotal}</strong>
                         </h5>
                         <PayPalButton total={cartTotal} clearCart={clearCart} history={history}/>
 

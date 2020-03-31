@@ -6,13 +6,6 @@ import { Link } from "react-router-dom"
 
 
 class Model extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-
-        }
-    }
 
     render() {
         return (
@@ -28,7 +21,7 @@ class Model extends Component {
                         <ModelContainer>
                             <div id="modal" className="container">
                                 <div className="row">
-                                    <div className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize">
+                                    <div id="change" className="col-8 mx-auto col-md-6 col-lg-6 text-center text-capitalize">
                                         <h5>item added to the cart</h5>
                                         <img src={img} className="img-fluid"
                                         alt="product"/>
@@ -36,7 +29,7 @@ class Model extends Component {
                                         <h5 className="text-muted">price : $ {price}</h5>
                                         <Link to="/">
                                             <ButtonContainer onClick={() => closeModal()}>
-                                                store
+                                                courses
                                             </ButtonContainer>
                                         </Link>
                                         <Link to="/cart">
@@ -48,7 +41,6 @@ class Model extends Component {
                                 </div>
                             </div>
                         </ModelContainer>)
-
                     }
                 }}
             </ProductConsumer>
@@ -66,8 +58,17 @@ background: rgba(0, 0, 0, 0.3);
 display: flex;
 align-items: center;
 justify-content: center;
+
 #modal {
     background: var(--mainWhite);
+    max-width: 402px;
+}
+
+#change {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 `
 
