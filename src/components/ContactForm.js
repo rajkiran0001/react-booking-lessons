@@ -10,7 +10,7 @@ const encode = (data) => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "", course: "", date: ""};
+    this.state = { name: "", email: "", message: ""};
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -41,7 +41,7 @@ class ContactForm extends React.Component {
             <Label for="exampleEmail">Email</Label>
             <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" value={email} onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
+          {/* <FormGroup>
             <Label for="course">courses</Label>
             <Input type="text" name="course" id="courses" placeholder="Number of courses booked" value={course} onChange={this.handleChange} />
           </FormGroup>
@@ -53,7 +53,7 @@ class ContactForm extends React.Component {
           id="exampleDate"
           placeholder="date placeholder" value={date} onChange={this.handleChange}
         />
-          </FormGroup>
+          </FormGroup> */}
           <FormGroup>
             <Label for="exampleMessage">Message</Label>
             <Input type="textarea" name="message" id="exampleMessage" placeholder="Enter your text" value={message} onChange={this.handleChange} />
