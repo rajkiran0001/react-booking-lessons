@@ -10,7 +10,7 @@ const encode = (data) => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = { name: "", email: "", message: "", course: "", date: ""};
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -30,7 +30,7 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, message, course, date } = this.state;
     return (
           <Form onSubmit={this.handleSubmit}>
           <FormGroup>
@@ -40,6 +40,19 @@ class ContactForm extends React.Component {
           <FormGroup>
             <Label for="exampleEmail">Email</Label>
             <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" value={email} onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for="course">courses</Label>
+            <Input type="text" name="course" id="courses" placeholder="Number of courses booked" value={course} onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+          <Label for="exampleDate">Date</Label>
+        <Input
+          type="date"
+          name="date"
+          id="exampleDate"
+          placeholder="date placeholder" value={date} onChange={this.handleChange}
+        />
           </FormGroup>
           <FormGroup>
             <Label for="exampleMessage">Message</Label>
@@ -52,25 +65,3 @@ class ContactForm extends React.Component {
 }
 
 export default ContactForm
-
-
-{/* <Form onSubmit={this.handleSubmit}>
-<p>
-  <Label>
-    Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-  </Label>
-</p>
-<p>
-  <Label>
-    Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-  </Label>
-</p>
-<p>
-  <Label>
-    Message: <textarea name="message" value={message} onChange={this.handleChange} />
-  </Label>
-</p>
-<p>
-  <button type="submit">Send</button>
-</p>
-</Form> */}

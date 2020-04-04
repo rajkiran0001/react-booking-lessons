@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom"
 import PayPalButton from './PayPalButton'
 
-
 function CartTotals({ value, history }) {
     const { cartTotal, clearCart } = value;
     console.log(value);
@@ -23,6 +22,8 @@ function CartTotals({ value, history }) {
 
                     </div>
                 </div>
+                
+
             </div>
         </>
     )

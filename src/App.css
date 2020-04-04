@@ -1,3 +1,6 @@
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
 :root{
   --mainBlue: #2a2a72;
   --lightBlue: #009ffd;
