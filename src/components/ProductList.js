@@ -23,12 +23,18 @@ class ProductList extends Component {
                                 }}
                             </ProductConsumer>
                         </div><br/>
-                        <b style={{color: "#2a2a72"}}>Registration Form:</b>
+                        <div>
+                        <div style={{float: 'left'}}>
+                        <b style={{color: "#006600"}}>Registration Form:</b>
                         <ContactForm/>
                         <br/>
+                        </div>
+                        <div style={{float: 'right', maxWidth:680}}>
                             <strong style={{color:"red"}}>Booked Time Slots:s</strong><br/>
                             <b style={{color:"red"}}>our courses are available on fridays, saturdays and sundays</b>
                         <Calander/>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </React.Fragment>

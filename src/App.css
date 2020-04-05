@@ -2,8 +2,8 @@
 @import '~@fullcalendar/daygrid/main.css';
 
 :root{
-  --mainBlue: #2a2a72;
-  --lightBlue: #009ffd;
+  --mainBlue: #006600;
+  --lightBlue: #00b300;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
