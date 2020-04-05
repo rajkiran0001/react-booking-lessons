@@ -148,7 +148,6 @@ class Contact extends React.Component {
                 <div style={{ clear: 'both', marginLeft: 70, marginRight: 70 }}>
                     <br />
                     <strong style={{ color: "red" }}>Booked Time Slots:</strong><br />
-                    <b style={{ color: "red" }}>our courses are available on fridays, saturdays and sundays</b>
                     <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]}
                         events={[
                             { title: 'reading', date: '2020-04-04T12:00:00' },

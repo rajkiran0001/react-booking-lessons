@@ -31,7 +31,6 @@ class ProductList extends Component {
                         </div>
                         <div style={{float: 'right', maxWidth:680}}>
                             <strong style={{color:"red"}}>Booked Time Slots:s</strong><br/>
-                            <b style={{color:"red"}}>our courses are available on fridays, saturdays and sundays</b>
                         <Calander/>
                         </div>
                         </div>
