@@ -1,8 +1,9 @@
 import React from 'react';
 
 function CartItem({ item, value }) {
-    const { id, title, img, price, total, count } = item;
+    let { id, title, img, price, total, count } = item;
     const { increment, decrement, removeItem } = value;
+    total = parseFloat(total.toFixed(2));
     return (
         <div className="row m-2 text-capitalize text-center">
             <div className="col-10 mx-auto col-lg-2">

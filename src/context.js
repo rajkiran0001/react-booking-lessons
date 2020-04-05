@@ -125,7 +125,7 @@ class ProductProvider extends Component {
     addTotals = () =>{
         let subTotal = 0;
         this.state.cart.map(item => (subTotal += item.total));
-        const total = subTotal;
+        const total = parseFloat(subTotal.toFixed(2));
         this.setState(() =>{
             return {
                 cartTotal: total

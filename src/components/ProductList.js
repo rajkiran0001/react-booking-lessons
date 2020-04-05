@@ -6,8 +6,6 @@ import ContactForm from './ContactForm';
 import Event from './Event';
 import Calander from './Calander';
 
-
-
 class ProductList extends Component {
 
     render() {
@@ -24,16 +22,16 @@ class ProductList extends Component {
                                     })
                                 }}
                             </ProductConsumer>
-                        </div>{" "}
-                        Contact Form:
+                        </div><br/>
+                        <b style={{color: "#2a2a72"}}>Registration Form:</b>
                         <ContactForm/>
-                        Booked Time Slot:
+                        <br/>
+                            <strong style={{color:"red"}}>Booked Time Slots:s</strong><br/>
+                            <b style={{color:"red"}}>our courses are available on fridays, saturdays and sundays</b>
                         <Calander/>
                     </div>
                 </div>
             </React.Fragment>
-
-            // <Product></Product>
 
         )
     }

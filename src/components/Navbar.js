@@ -20,6 +20,11 @@ class Navbar extends Component {
                                 courses
                              </Link>
                         </li>
+                        <li className="nav-item ml-5">
+                            <Link to="/contact" className="nav-link">
+                                contact us
+                             </Link>
+                        </li>
                     </ul>
                     <Link to="/cart" className="ml-auto">
                     <ButtonContainer>

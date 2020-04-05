@@ -14,8 +14,8 @@ export default class DemoApp extends React.Component {
     return (
       <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]}  
        events={[
-        { title: 'event 1', date: '2020-04-01T16:00:00' },
-        { title: 'event 2', date: '2020-04-02T10:00:00' }
+        { title: 'reading', date: '2020-04-04T16:00:00' },
+        { title: 'speaking', date: '2020-04-05T10:00:00' }
       ]}
  />
     )

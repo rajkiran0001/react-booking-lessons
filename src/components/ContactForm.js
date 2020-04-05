@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -10,11 +10,10 @@ const encode = (data) => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "", course: "", date: "", time: ""};
+    this.state = { name: "", email: "", message: "", course: "", date: ""};
   }
 
   /* Here’s the juicy bit for posting the form submission */
-
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -30,11 +29,11 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message, course, date, time } = this.state;
-    console.log(name, email, message, course, date, time);
+    const { name, email, message, course, date } = this.state;
+    console.log(name, email, message, course, date);
     
     return (
-          <Form onSubmit={this.handleSubmit}>
+          <Form onSubmit={this.handleSubmit} style={{ width: 500}}>
           <FormGroup>
             <Label for="exampleName">Name</Label>
             <Input type="text" name="name" id="examplePassword" placeholder="Enter your name" value={name} onChange={this.handleChange} />
@@ -44,7 +43,7 @@ class ContactForm extends React.Component {
             <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" value={email} onChange={this.handleChange} />
           </FormGroup>
           <FormGroup>
-            <Label for="course">courses</Label>
+            <Label for="course">Courses</Label>
             <Input type="text" name="course" id="courses" placeholder="Number of courses booked" value={course} onChange={this.handleChange} />
           </FormGroup>
           <FormGroup>
